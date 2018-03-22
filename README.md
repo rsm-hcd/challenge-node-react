@@ -12,7 +12,7 @@ This boilerplate is built using the following libraries:
 
 
 ## Technical Requirements
----
+
 * Show a list of students with the following information:
     * First Name
     * Last Name
@@ -25,7 +25,7 @@ This boilerplate is built using the following libraries:
 * Before a student can be removed, a confirmation dialog should be displayed that asks the user if they really want to delete the student
 
 ## Stretch Goals
----
+
 * Demonstrate unit tests on your API controllers and/or React components
 * Add paging to the student list
 * Add filtering to the student list
@@ -35,11 +35,11 @@ This boilerplate is built using the following libraries:
 * Deploy to cloud host such as Heroku
 
 ## Software Requirements
----
+
 * Node 7.x
 
 ## Environment Setup
----
+
 * Extract the contents of the .zip file
 * Set up a MongoDB instance either locally or using a free hosting site such as the following:
     1. MongoDB Atlas - https://www.mongodb.com/cloud/atlas
