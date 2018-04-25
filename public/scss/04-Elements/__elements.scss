@@ -1,0 +1,24 @@
+/**
+ * CONTENT
+ *
+ * ANCHORS
+ * Global styles for the anchor HTML element <a href="#"></a>
+ *
+ * HEADINGS
+ * Global styles for all of the heading HTML elements <h1></h1>, <h2></h2> ...
+ *
+ * LABELS
+ * Global styles for all of the label HTML elements <label></label>
+ *
+ * PARAGRAPHS
+ * Global styles for all of the paragraph HTML elements <p></p>
+ *
+ */
+
+@import "anchors",
+        "headings",
+        "hr",
+        "labels",
+        "lists",
+        "paragraphs", 
+        "forms";

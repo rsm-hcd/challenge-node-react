@@ -23,6 +23,8 @@ This boilerplate is built using the following libraries:
 * The user should be able to edit the an existing student record
 * The user should be able to delete a student
 * Before a student can be removed, a confirmation dialog should be displayed that asks the user if they really want to delete the student
+* Create a mixin for rem font sizes, and apply it to all headings in correct scss partial. 
+* Create a sass map for defining colors. Use color map to make paragraph tags a color of your choosing. 
 
 ## Stretch Goals
 
@@ -33,6 +35,7 @@ This boilerplate is built using the following libraries:
 * Show form validation client side making student first and last name required
 * Utilize a JS abstraction such as TypeScript
 * Deploy to cloud host such as Heroku
+* Add custom classes on alert dialog using BEM Methodology, and style it in its respective scss partial. 
 
 ## Software Requirements
 
