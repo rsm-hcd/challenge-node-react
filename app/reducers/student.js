@@ -2,7 +2,7 @@ const initialState = {
   items: []
 };
 
-export default function(state = initialState, action) {
+export default function student(state = initialState, action) {
   switch (action.type) {
     case 'FETCH_STUDENTS':
       state.items = action.payload;
