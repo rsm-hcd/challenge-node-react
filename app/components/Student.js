@@ -15,11 +15,11 @@ class Student extends React.Component {
   }
 
   handleEdit() {
-    this.props.showEdit(this.props.editIsVisible);
+    this.props.showEdit(this.props.student._id);
   }
 
   handleDelete() {
-    this.props.showDelete(this.props.deleteisVisible);
+    this.props.showDelete(this.props.student._id);
   }
 
   render() {
