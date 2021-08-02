@@ -21,7 +21,16 @@ export default function student(state = initialState, action) {
       return Object.assign({}, state, {
         currentStudentId: action.payload,
         deleteisVisible: true
-      })
+      });
+    case 'EDIT_STUDENT': // update student info in state
+      let students = state.items.map(student => (
+        student._id === action.payload._id ?
+        student = action.payload : student
+      ));
+      return Object.assign({}, state, { items: students });
+    case 'DELETE_STUDENT': // remove student from items array
+      students = state.items.filter(student => student._id !== action.payload);
+      return Object.assign({}, state, { items: students });
     default:
       return state;
   };

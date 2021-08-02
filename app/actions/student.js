@@ -54,19 +54,25 @@ export const editStudent = (studentData) => dispatch => {
     .then(res => res.json())
     .then(student =>
       dispatch({
-        type: 'EDIT_STUDENT'
+        type: 'EDIT_STUDENT',
+        payload: student
       })
     )
     .catch(e => console.log(e));
 };
 
 // delete student from the database
-export const deleteStudent = (studentId) => dispatch {
+export const deleteStudent = (studentId) => dispatch => {
   fetch('/delete', {
     method: 'DELETE',
     headers: { 'Content-type': 'application/json' }
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data =>
+      dispatch({
+        type: 'DELETE_STUDENT',
+        payload: studentId
+      })
+    )
     .catch(e => console.log(e));
 }
