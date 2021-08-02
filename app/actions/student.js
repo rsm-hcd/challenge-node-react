@@ -26,16 +26,16 @@ export const addStudent = (studentData) => dispatch => {
     .catch(e => console.log(e));
 };
 
-export const showEdit = (editIsVisible) => dispatch => {
+export const showEdit = (studentId) => dispatch => {
   dispatch({
     type: 'SHOW_EDIT',
-    payload: !editIsVisible
+    payload: studentId
   })
 };
 
-export const showDelete = (deleteIsVisible) => dispatch => {
+export const showDelete = (studentId) => dispatch => {
   dispatch({
     type: 'SHOW_DELETE',
-    payload: !deleteIsVisible
+    payload: studentId
   })
 };
