@@ -21,8 +21,8 @@ class StudentList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  students: state.students.items,
-  newStudent: state.students.item
+  students: state.student.items,
+  newStudent: state.student.item
 }
 
 export default connect(mapStateToProps, { fetchStudents })(StudentList);
