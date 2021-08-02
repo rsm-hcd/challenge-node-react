@@ -3,7 +3,7 @@ const initialState = {
   item: {},
   editIsVisible: false,
   deleteisVisible: false,
-  currentStudentId: null
+  currentStudent: null
 };
 
 export default function student(state = initialState, action) {
@@ -12,14 +12,14 @@ export default function student(state = initialState, action) {
       return Object.assign({}, state, { items: action.payload });
     case 'ADD_STUDENT': // add a new student to database
       return Object.assign({}, state, { item: action.payload });
-    case 'SHOW_EDIT': // show the edit student form
+    case 'TOGGLE_EDIT': // show the edit student form
       return Object.assign({}, state, {
-        currentStudentId: action.payload.studentId,
+        currentStudent: action.payload.student,
         editIsVisible: action.payload.editIsVisible
       });
-    case 'SHOW_DELETE': // show the delete student confirmation
+    case 'TOGGLE_DELETE': // show the delete student confirmation
       return Object.assign({}, state, {
-        currentStudentId: action.payload.studentId,
+        currentStudent: action.payload.student,
         deleteisVisible: action.payload.deleteisVisible
       });
     case 'EDIT_STUDENT': // update student info in state

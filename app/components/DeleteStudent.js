@@ -15,7 +15,7 @@ class DeleteStudent extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    studentId: state.student.currentStudentId
+    student: state.student.currentStudent
   }
 };
 

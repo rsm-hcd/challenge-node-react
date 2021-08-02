@@ -46,7 +46,7 @@ class AddStudent extends React.Component {
 
     const options = grades.map((grade, i) => (
       <option key={i} value={grade}>{grade}</option>
-    ))
+    ));
 
     return (
       <div>

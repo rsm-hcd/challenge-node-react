@@ -11,11 +11,11 @@ class Student extends React.Component {
   }
 
   handleEdit() {
-    this.props.toggleEdit(this.props.student._id, true);
+    this.props.toggleEdit(this.props.student, true);
   }
 
   handleDelete() {
-    this.props.toggleDelete(this.props.student._id, true);
+    this.props.toggleDelete(this.props.student, true);
   }
 
   render() {

@@ -29,19 +29,19 @@ export const addStudent = (studentData) => dispatch => {
 };
 
 // show edit student form
-export const toggleEdit = (studentId, editIsVisible) => dispatch => {
+export const toggleEdit = (student, editIsVisible) => dispatch => {
   console.log('COUNTING');
   dispatch({
-    type: 'SHOW_EDIT',
-    payload: { studentId, editIsVisible }
+    type: 'TOGGLE_EDIT',
+    payload: { student, editIsVisible }
   })
 };
 
 // show delete student form
-export const toggleDelete = (studentId, deleteisVisible) => dispatch => {
+export const toggleDelete = (student, deleteisVisible) => dispatch => {
   dispatch({
-    type: 'SHOW_DELETE',
-    payload: { studentId, deleteisVisible }
+    type: 'TOGGLE_DELETE',
+    payload: { student, deleteisVisible }
   })
 };
 
