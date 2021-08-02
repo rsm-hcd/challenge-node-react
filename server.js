@@ -121,6 +121,8 @@ app.get('/unlink/:provider', userController.ensureAuthenticated, userController.
 // Student controls
 app.get('/students', studentController.getAllStudents);
 app.post('/new-student', studentController.addStudent);
+app.put('/edit', studentController.updateStudent);
+app.delete('/delete', studentController.deleteStudent);
 
 // React server rendering
 app.use(function(req, res) {
