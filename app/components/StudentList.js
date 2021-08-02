@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchStudents } from '../actions/student';
+import Student from './Student';
 
 class StudentList extends React.Component {
   // call to the db for current list of students
@@ -16,7 +17,15 @@ class StudentList extends React.Component {
   }
 
   render() {
+    const students = this.props.students.map((student, i) => (
+      <Student student={student} />
+    ));
 
+    return (
+      <div>
+        {students}
+      </div>
+    )
   }
 }
 
