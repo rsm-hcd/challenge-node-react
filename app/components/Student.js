@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { showEdit, showDelete } from '../actions/student';
 
 class Student extends React.Component {
   constructor(props) {
@@ -13,11 +15,11 @@ class Student extends React.Component {
   }
 
   handleEdit() {
-    this.setState({ editIsVisible: !editIsVisible });
+    this.props.showEdit(this.props.editIsVisible);
   }
 
   handleDelete() {
-    this.setState({ deleteisVisible: !deleteisVisible });
+    this.props.showDelete(this.props.deleteisVisible);
   }
 
   render() {
@@ -36,4 +38,11 @@ class Student extends React.Component {
   }
 }
 
-export default Student;
+const mapStateToProps = (state) => {
+  return {
+    editIsVisible: state.student.editIsVisible,
+    deleteisVisible: state.student.deleteisVisible
+  }
+};
+
+export default connect(mapStateToProps, { showEdit, showDelete })(Student);
