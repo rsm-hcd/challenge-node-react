@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addStudent } from '../actions/student.js';
+import { addStudent } from '../actions/student';
 
 class AddStudent extends React.Component {
   constructor(props) {
@@ -24,6 +24,19 @@ class AddStudent extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    const newStudent = {
+      name: {
+        first: this.state.firstName,
+        last: this.state.lastName
+      },
+      email: this.state.email,
+      age: Number(this.state.age),
+      grade: this.state.grade
+    };
+
+    console.log(newStudent);
+
+    this.props.addStudent(newStudent);
   };
 
 
@@ -65,7 +78,7 @@ class AddStudent extends React.Component {
               type="email"
               name="email"
               onChange={this.handleChange}
-              value={this.state.firstName}
+              value={this.state.email}
               required
             />
           </div>
@@ -75,16 +88,19 @@ class AddStudent extends React.Component {
               type="number"
               name="age"
               onChange={this.handleChange}
-              value={this.state.firstName}
+              value={this.state.age}
               required
             />
           </div>
           <div>
             <label>Grade</label>
-            <select name="grade">
+            <select name="grade" onChange={this.handleChange}>
               <option value="">Select a grade</option>
               {options}
             </select>
+          </div>
+          <div>
+            <input type="submit" value="Submit" />
           </div>
         </form>
       </div>
@@ -92,4 +108,4 @@ class AddStudent extends React.Component {
   }
 }
 
-export default AddStudent;
+export default connect(null, { addStudent })(AddStudent);
