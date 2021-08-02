@@ -17,13 +17,13 @@ class StudentList extends React.Component {
   }
 
   render() {
-    const students = this.props.students.map((student, i) => (
-      <Student student={student} />
-    ));
+    // const students = this.props.students.map((student, i) => (
+    //   <Student student={student} />
+    // ));
 
     return (
       <div>
-        {students}
+        {/* {students} */}
       </div>
     )
   }
