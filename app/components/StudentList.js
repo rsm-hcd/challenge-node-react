@@ -17,21 +17,36 @@ class StudentList extends React.Component {
   }
 
   render() {
-    // const students = this.props.students.map((student, i) => (
-    //   <Student student={student} />
-    // ));
+    const students = this.props.students.map((student, i) => (
+      <Student key={i} student={student} />
+    ));
 
     return (
       <div>
-        {/* {students} */}
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Grade</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {students}
+          </tbody>
+        </table>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  students: state.student.items,
-  newStudent: state.student.item
-});
+const mapStateToProps = (state) => {
+  return {
+    students: state.student.items,
+    newStudent: state.student.item
+  }
+};
 
 export default connect(mapStateToProps, { fetchStudents })(StudentList);
