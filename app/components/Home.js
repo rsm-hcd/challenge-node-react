@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <Messages messages={this.props.messages}/>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-sm-4">
             <div className="panel">
               <div className="panel-body">
@@ -40,8 +40,8 @@ class Home extends React.Component {
                 <a href="#" role="button" className="btn btn-default">View details</a>
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     );
   }
