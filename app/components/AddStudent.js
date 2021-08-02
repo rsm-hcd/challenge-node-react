@@ -91,3 +91,5 @@ class AddStudent extends React.Component {
     )
   }
 }
+
+export default AddStudent;
