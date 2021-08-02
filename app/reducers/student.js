@@ -14,13 +14,13 @@ export default function student(state = initialState, action) {
       return Object.assign({}, state, { item: action.payload });
     case 'SHOW_EDIT': // show the edit student form
       return Object.assign({}, state, {
-        currentStudentId: action.payload,
-        editIsVisible: true
+        currentStudentId: action.payload.studentId,
+        editIsVisible: action.payload.editIsVisible
       });
     case 'SHOW_DELETE': // show the delete student confirmation
       return Object.assign({}, state, {
-        currentStudentId: action.payload,
-        deleteisVisible: true
+        currentStudentId: action.payload.studentId,
+        deleteisVisible: action.payload.deleteisVisible
       });
     case 'EDIT_STUDENT': // update student info in state
       let students = state.items.map(student => (
@@ -34,4 +34,4 @@ export default function student(state = initialState, action) {
     default:
       return state;
   };
-}
+};
