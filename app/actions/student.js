@@ -1,3 +1,4 @@
+// get student info form datatbase
 export const fetchStudents = () => dispatch => {
   fetch('/students')
     .then(res => res.json())
@@ -10,6 +11,7 @@ export const fetchStudents = () => dispatch => {
     .catch(e => console.log(e));
 };
 
+// add new student to database
 export const addStudent = (studentData) => dispatch => {
   fetch('/new-student', {
     method: 'POST',
@@ -26,6 +28,7 @@ export const addStudent = (studentData) => dispatch => {
     .catch(e => console.log(e));
 };
 
+// show edit student form
 export const showEdit = (studentId) => dispatch => {
   dispatch({
     type: 'SHOW_EDIT',
@@ -33,6 +36,7 @@ export const showEdit = (studentId) => dispatch => {
   })
 };
 
+// show delete student form
 export const showDelete = (studentId) => dispatch => {
   dispatch({
     type: 'SHOW_DELETE',
