@@ -47,6 +47,9 @@ mongoose.connection.on('error', function() {
   console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
   process.exit(1);
 });
+mongoose.connection.once('open', () => {
+  console.log('mongoose connected successfully');
+});
 
 var hbs = exphbs.create({
   defaultLayout: 'main',
