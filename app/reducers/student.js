@@ -1,16 +1,18 @@
 const initialState = {
-  items: []
+  items: [],
+  item: {}
 };
 
 export default function student(state = initialState, action) {
   switch (action.type) {
     case 'FETCH_STUDENTS':
-      state.items = action.payload;
-      return { state };
-      // return {
-      //   ...state,
-      //   items: action.payload
-      // };
+      var newState = state;
+      newState.items = action.payload;
+      return { newState };
+    case 'ADD_STUDENT':
+      newState = state;
+      newState.item = action.payload;
+      return { newState };
     default:
       return state;
   };
