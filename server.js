@@ -120,6 +120,7 @@ app.get('/unlink/:provider', userController.ensureAuthenticated, userController.
 
 // Student controls
 app.get('/students', studentController.getAllStudents);
+app.post('/new-student', studentController.addStudent);
 
 // React server rendering
 app.use(function(req, res) {
