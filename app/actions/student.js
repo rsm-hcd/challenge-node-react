@@ -25,3 +25,17 @@ export const addStudent = (studentData) => dispatch => {
     )
     .catch(e => console.log(e));
 };
+
+export const showEdit = (editIsVisible) => dispatch => {
+  dispatch({
+    type: 'SHOW_EDIT',
+    payload: !editIsVisible
+  })
+};
+
+export const showDelete = (deleteIsVisible) => dispatch => {
+  dispatch({
+    type: 'SHOW_DELETE',
+    payload: !deleteIsVisible
+  })
+};
