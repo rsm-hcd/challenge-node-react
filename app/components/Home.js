@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Messages from './Messages';
 import StudentList from './StudentList';
 import AddStudent from './AddStudent';
+import EditStudent from './EditStudent';
+import DeleteStudent from './DeleteStudent';
 
 class Home extends React.Component {
   render() {
@@ -11,6 +13,8 @@ class Home extends React.Component {
         <Messages messages={this.props.messages}/>
         <StudentList />
         <AddStudent />
+        {this.props.editIsVisible && <EditStudent />}
+        {this.props.deleteisVisible && <DeleteStudent />}
       </div>
     );
   }
@@ -18,7 +22,9 @@ class Home extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    messages: state.messages
+    messages: state.messages,
+    editIsVisible: state.student.editIsVisible,
+    deleteisVisible: state.student.deleteisVisible
   };
 };
 
