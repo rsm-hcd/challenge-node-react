@@ -64,7 +64,7 @@ const StudentForm = ({
         />
       </div>
       <div className="row">
-        <div className="form-group col-md-6">
+        <div className="form-group col-md-5">
           <label>Age</label>
           <input
             type="number"
@@ -75,7 +75,7 @@ const StudentForm = ({
             required
           />
         </div>
-        <div className="form-group col-md-6">
+        <div className="form-group col-md-7">
           <label>Grade</label>
           <select
             name="grade"

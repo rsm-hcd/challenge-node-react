@@ -35,14 +35,20 @@ class AddStudent extends React.Component {
       grade: this.state.grade,
     };
 
-    console.log(newStudent);
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      age: '',
+      grade: '',
+    });
 
     this.props.addStudent(newStudent);
   }
 
   render() {
     return (
-      <div className="col-md-4">
+      <div className="col-md-3">
         <h3>Add Student</h3>
         <StudentForm
           student={this.state}
