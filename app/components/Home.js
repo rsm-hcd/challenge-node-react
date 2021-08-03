@@ -5,6 +5,7 @@ import StudentList from './StudentList';
 import AddStudent from './AddStudent';
 import EditStudent from './EditStudent';
 import DeleteStudent from './DeleteStudent';
+import Sort from './Sort';
 
 class Home extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Home extends React.Component {
       <div className="container">
         <Messages messages={this.props.messages} />
         <div className="row">
+          <Sort />
           <StudentList />
           <AddStudent />
         </div>
