@@ -19,7 +19,6 @@ exports.addStudent = (req, res) => {
 };
 
 exports.updateStudent = (req, res) => {
-  console.log('BODY: ', req.body)
   const { _id } = req.body;
   const update = req.body;
   const options = { new: true };
@@ -33,9 +32,9 @@ exports.updateStudent = (req, res) => {
 };
 
 exports.deleteStudent = (req, res) => {
- const { _id } = req.body;
+  const { _id } = req.body;
 
- return Student.deleteOne({ _id })
+  return Student.deleteOne({ _id })
    .then(response => res.status(200).send(response))
    .catch(e => {
      console.log(e);
