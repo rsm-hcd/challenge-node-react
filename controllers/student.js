@@ -19,6 +19,7 @@ exports.addStudent = (req, res) => {
 };
 
 exports.updateStudent = (req, res) => {
+  console.log('BODY: ', req.body)
   const { _id } = req.body;
   const update = req.body;
   const options = { new: true };

@@ -30,7 +30,6 @@ export const addStudent = (studentData) => dispatch => {
 
 // show edit student form
 export const toggleEdit = (student, editIsVisible) => dispatch => {
-  console.log('COUNTING');
   dispatch({
     type: 'TOGGLE_EDIT',
     payload: { student, editIsVisible }

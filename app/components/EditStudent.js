@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleEdit } from '../actions/student';
+import { toggleEdit, editStudent } from '../actions/student';
 
 class EditStudent extends React.Component {
   constructor(props) {
@@ -24,6 +24,19 @@ class EditStudent extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
+
+    const studentData = {
+      _id: this.props.student._id,
+      name: {
+        first: this.state.firstName,
+        last: this.state.lastName
+      },
+      email: this.state.email,
+      age: this.state.age,
+      grade: this.state.grade
+    }
+
+    this.props.editStudent(studentData)
   }
 
   handleChange(e) {
@@ -43,6 +56,7 @@ class EditStudent extends React.Component {
         </div>
         <div className="modal">
           <form onSubmit={this.onSubmit}>
+          <h3>Edit Student Information</h3>
             <div className="form-group">
               <label>First Name</label>
               <input
@@ -98,7 +112,7 @@ class EditStudent extends React.Component {
             </select>
           </div>
           <input
-            className="btn btn-defaul"
+            className="btn btn-default"
             type="submit"
             value="Submit"
           />
@@ -115,4 +129,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps, { toggleEdit })(EditStudent);
+export default connect(mapStateToProps, { toggleEdit, editStudent })(EditStudent);
