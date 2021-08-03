@@ -26,8 +26,16 @@ class DeleteStudent extends React.Component {
         </div>
         <div className="modal">
           <h3>Are you sure you want to delete {this.props.student.name.first} {this.props.student.name.last}?</h3>
-          <button className="btn btn-default" onClick={this.handleDelete}>Yes</button>
-          <button className="btn btn-default" onClick={this.hideAlert}>No</button>
+          <button
+            className="btn btn-default"
+            onClick={this.handleDelete}>
+              Yes
+          </button>
+          <button
+            className="btn btn-default"
+            onClick={this.hideAlert}>
+              No
+          </button>
         </div>
       </div>
     )

@@ -14,7 +14,7 @@ class EditStudent extends React.Component {
     }
 
     this.hideForm = this.hideForm.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -22,7 +22,7 @@ class EditStudent extends React.Component {
     this.props.toggleEdit(null, false);
   }
 
-  onSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault();
 
     const studentData = {
@@ -44,18 +44,12 @@ class EditStudent extends React.Component {
   }
 
   render() {
-    const grades = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
-
-    const options = grades.map((grade, i) => (
-      <option key={i} value={grade}>{grade}</option>
-    ));
-
     return (
       <div>
         <div className="modal-overlay" onClick={this.hideForm}>
         </div>
         <div className="modal">
-          <form onSubmit={this.onSubmit}>
+          <form handleSubmit={this.handleSubmit}>
           <h3>Edit Student Information</h3>
             <div className="form-group">
               <label>First Name</label>
