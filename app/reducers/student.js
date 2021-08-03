@@ -34,6 +34,11 @@ export default function student(state = initialState, action) {
         (student) => student._id !== action.payload
       );
       return Object.assign({}, state, { items: students });
+    case 'SORT_STUDENTS': // sort the items array based on user input
+      students = state.items.sort((a, b) => {
+        const { column, isAsc } = action.payload;
+        return isAsc ? a[column] - b[column] : b[column] - a[column];
+      });
     default:
       return state;
   }

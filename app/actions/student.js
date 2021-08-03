@@ -80,12 +80,12 @@ export const deleteStudent = (student) => (dispatch) => {
 };
 
 // sort students in state by column
-// isDesc = boolean for descending or ascending order
+// isAsc = boolean for descending or ascending order
 export const sortStudents =
-  (column, isDesc = false) =>
+  (column, isAsc = true) =>
   (dispatch) => {
     dispatch({
       type: 'SORT_STUDENTS',
-      payload: { column, isDesc },
+      payload: { column, isAsc },
     });
   };
