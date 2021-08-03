@@ -11,3 +11,7 @@
 // Font
 // ----
 
+@function clr($fontColor) {
+  $color: map-get($colors, $fontColor);
+  @return $color;
+}

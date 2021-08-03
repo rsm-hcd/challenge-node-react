@@ -6130,6 +6130,15 @@ h5 {
 h6 {
   font-size: 0.8rem; }
 
+p.primary-font {
+  color: #555; }
+
+p.name-font {
+  color: #333; }
+
+p.email-font {
+  color: #0000ff; }
+
 /**
  * CONTENT
  *

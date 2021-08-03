@@ -6,3 +6,14 @@
   * This file contains all of the maps and variables associated with
   * colors and elements for which colors are applied.
 */
+
+// font colors
+$primary: #555;
+$name: #333;
+$email: #0000ff;
+
+$colors: (
+  primary: $primary,
+  name: $name,
+  email: $email,
+);

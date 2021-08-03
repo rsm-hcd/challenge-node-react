@@ -22,11 +22,19 @@ class Student extends React.Component {
     return (
       <tr>
         <td>
-          {this.props.student.name.first} {this.props.student.name.last}
+          <p className="name-font">
+            {this.props.student.name.first} {this.props.student.name.last}
+          </p>
         </td>
-        <td>{this.props.student.email}</td>
-        <td>{this.props.student.age}</td>
-        <td>{this.props.student.grade}</td>
+        <td>
+          <p className="email-font">{this.props.student.email}</p>
+        </td>
+        <td>
+          <p>{this.props.student.age}</p>
+        </td>
+        <td>
+          <p>{this.props.student.grade}</p>
+        </td>
         <td>
           <button className="btn btn-default" onClick={this.handleEdit}>
             Edit
