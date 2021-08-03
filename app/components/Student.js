@@ -21,24 +21,30 @@ class Student extends React.Component {
   render() {
     return (
       <tr>
-        <td>{this.props.student.name.first} {this.props.student.name.last}</td>
+        <td>
+          {this.props.student.name.first} {this.props.student.name.last}
+        </td>
         <td>{this.props.student.email}</td>
         <td>{this.props.student.age}</td>
         <td>{this.props.student.grade}</td>
         <td>
-          <button onClick={this.handleEdit}>Edit</button>
-          <button onClick={this.handleDelete}>Delete</button>
+          <button className="btn btn-default" onClick={this.handleEdit}>
+            Edit
+          </button>
+          <button className="btn btn-default" onClick={this.handleDelete}>
+            Delete
+          </button>
         </td>
       </tr>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
     editIsVisible: state.student.editIsVisible,
-    deleteisVisible: state.student.deleteisVisible
-  }
+    deleteisVisible: state.student.deleteisVisible,
+  };
 };
 
 export default connect(mapStateToProps, { toggleEdit, toggleDelete })(Student);

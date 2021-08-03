@@ -1,10 +1,31 @@
 import React from 'react';
 
-const StudentForm = ({ student, handleChange, handleSubmit, isEdit, hideForm }) => {
-  const grades = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
+const StudentForm = ({
+  student,
+  handleChange,
+  handleSubmit,
+  isEdit,
+  hideForm,
+}) => {
+  const grades = [
+    '1st',
+    '2nd',
+    '3rd',
+    '4th',
+    '5th',
+    '6th',
+    '7th',
+    '8th',
+    '9th',
+    '10th',
+    '11th',
+    '12th',
+  ];
 
   const options = grades.map((grade, i) => (
-    <option key={i} value={grade}>{grade}</option>
+    <option key={i} value={grade}>
+      {grade}
+    </option>
   ));
 
   return (
@@ -59,24 +80,21 @@ const StudentForm = ({ student, handleChange, handleSubmit, isEdit, hideForm }) 
           name="grade"
           className="form-control"
           value={student.grade}
-          onChange={handleChange}>
-            {options}
+          onChange={handleChange}
+        >
+          <option value="">Select a grade</option>
+          {options}
         </select>
       </div>
-      <input
-        type="submit"
-        className="btn btn-default"
-        value="Submit"
-      />
+      <input type="submit" className="btn btn-default" value="Submit" />
+      {/* Show a cancel button if Edit Student form */}
       {isEdit && (
-        <button
-          className="btn btn-default"
-          onClick={hideForm}>
-            Cancel
+        <button className="btn btn-default" onClick={hideForm}>
+          Cancel
         </button>
       )}
     </form>
-  )
-}
+  );
+};
 
 export default StudentForm;

@@ -22,30 +22,30 @@ class DeleteStudent extends React.Component {
   render() {
     return (
       <div>
-        <div className="modal-overlay" onClick={this.hideAlert}>
-        </div>
+        <div className="modal-overlay" onClick={this.hideAlert}></div>
         <div className="modal">
-          <h3>Are you sure you want to delete {this.props.student.name.first} {this.props.student.name.last}?</h3>
-          <button
-            className="btn btn-default"
-            onClick={this.handleDelete}>
-              Yes
+          <h3>
+            Are you sure you want to delete {this.props.student.name.first}{' '}
+            {this.props.student.name.last}?
+          </h3>
+          <button className="btn btn-default" onClick={this.handleDelete}>
+            Yes
           </button>
-          <button
-            className="btn btn-default"
-            onClick={this.hideAlert}>
-              No
+          <button className="btn btn-default" onClick={this.hideAlert}>
+            No
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    student: state.student.currentStudent
-  }
+    student: state.student.currentStudent,
+  };
 };
 
-export default connect(mapStateToProps, { toggleDelete, deleteStudent })(DeleteStudent);
+export default connect(mapStateToProps, { toggleDelete, deleteStudent })(
+  DeleteStudent
+);

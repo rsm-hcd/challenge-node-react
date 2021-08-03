@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import Messages from './Messages';
 import StudentList from './StudentList';
 import AddStudent from './AddStudent';
@@ -10,7 +10,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Messages messages={this.props.messages}/>
+        <Messages messages={this.props.messages} />
         <StudentList />
         <AddStudent />
         {this.props.editIsVisible && <EditStudent />}
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => {
   return {
     messages: state.messages,
     editIsVisible: state.student.editIsVisible,
-    deleteisVisible: state.student.deleteisVisible
+    deleteisVisible: state.student.deleteisVisible,
   };
 };
 
