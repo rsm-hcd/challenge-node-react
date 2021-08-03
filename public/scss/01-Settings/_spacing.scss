@@ -1,0 +1,21 @@
+// Margin classes
+
+$spacing: (1, 2, 3, 4, 5);
+
+@each $margin in $spacing {
+  .my-#{$margin} {
+    margin: #{$margin}rem 0;
+  }
+
+  .mx-#{$margin} {
+    margin: 0 #{$margin}rem;
+  }
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}

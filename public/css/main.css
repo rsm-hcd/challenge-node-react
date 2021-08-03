@@ -58,6 +58,43 @@
   * This file contains all of the maps and variables associated with
   * icons used throughout the application.
 */
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
+.my-1 {
+  margin: 1rem 0; }
+
+.mx-1 {
+  margin: 0 1rem; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.mx-2 {
+  margin: 0 2rem; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.mx-3 {
+  margin: 0 3rem; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.mx-4 {
+  margin: 0 4rem; }
+
+.my-5 {
+  margin: 5rem 0; }
+
+.mx-5 {
+  margin: 0 5rem; }
+
+.my-auto {
+  margin: auto 0; }
+
+.mx-auto {
+  margin: 0 auto; }
+
 /**
  * CONTENT
  *
@@ -91,7 +128,6 @@
  * Application wide generic styles and resets
  *
  */
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

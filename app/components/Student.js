@@ -36,10 +36,10 @@ class Student extends React.Component {
           <p>{this.props.student.grade}</p>
         </td>
         <td>
-          <button className="btn btn-default" onClick={this.handleEdit}>
+          <button className="btn btn-default mx-1" onClick={this.handleEdit}>
             Edit
           </button>
-          <button className="btn btn-default" onClick={this.handleDelete}>
+          <button className="btn btn-default mx-1" onClick={this.handleDelete}>
             Delete
           </button>
         </td>
