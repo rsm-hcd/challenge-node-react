@@ -80,7 +80,7 @@ export const deleteStudent = (student) => (dispatch) => {
 };
 
 // update the order of students
-export const updateSort = (students) => {
+export const updateSort = (students) => (dispatch) => {
   dispatch({
     type: 'SORT_STUDENTS',
     payload: students,
