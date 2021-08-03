@@ -38,6 +38,7 @@ $panel-body-padding: 30px;
 html {
   position: relative;
   min-height: 100%;
+  font-size: 62.5%; /* for base 10 rem */
 }
 
 body {

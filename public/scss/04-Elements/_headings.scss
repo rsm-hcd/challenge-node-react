@@ -1,0 +1,31 @@
+h1 {
+  @include fontsize(40);
+}
+
+h2 {
+  @include fontsize(32);
+}
+
+h3 {
+  @include fontsize(24);
+}
+
+h4 {
+  @include fontsize(16);
+}
+
+h5 {
+  @include fontsize(12);
+}
+
+h6 {
+  @include fontsize(8);
+}
+
+// $headings: (1, 2, 3, 4, 5, 6);
+
+// @each $heading in $headings {
+//   h#{heading} {
+//     @include fontsize(#{$heading});
+//   }
+// }

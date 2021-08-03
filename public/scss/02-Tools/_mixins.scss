@@ -8,3 +8,7 @@
   * logic to be performed prior to rendering the attribute.
 */
 
+// font-size
+@mixin fontsize($size: 1) {
+  font-size: ($size * 0.1rem);
+}
