@@ -1,11 +1,13 @@
 const Student = require('../models/Student');
 
+// GET /students
 exports.getAllStudents = (req, res) => {
   return Student.find({})
     .then(response => res.send(response))
     .catch(e => console.log(e));
 };
 
+// POST /new-student
 exports.addStudent = (req, res) => {
   const student = req.body;
   const doc = new Student(student);
@@ -18,6 +20,7 @@ exports.addStudent = (req, res) => {
     });
 };
 
+// PUT /edit
 exports.updateStudent = (req, res) => {
   const { _id } = req.body;
   const update = req.body;
@@ -31,6 +34,7 @@ exports.updateStudent = (req, res) => {
     });
 };
 
+// DELETE /delete
 exports.deleteStudent = (req, res) => {
   const { _id } = req.body;
 
