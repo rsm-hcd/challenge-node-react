@@ -63,28 +63,30 @@ const StudentForm = ({
           required
         />
       </div>
-      <div className="form-group">
-        <label>Age</label>
-        <input
-          type="number"
-          name="age"
-          className="form-control"
-          value={student.age}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Grade</label>
-        <select
-          name="grade"
-          className="form-control"
-          value={student.grade}
-          onChange={handleChange}
-        >
-          <option value="">Select a grade</option>
-          {options}
-        </select>
+      <div className="row">
+        <div className="form-group col-md-6">
+          <label>Age</label>
+          <input
+            type="number"
+            name="age"
+            className="form-control"
+            value={student.age}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group col-md-6">
+          <label>Grade</label>
+          <select
+            name="grade"
+            className="form-control"
+            value={student.grade}
+            onChange={handleChange}
+          >
+            <option value="">Select a grade</option>
+            {options}
+          </select>
+        </div>
       </div>
       <input type="submit" className="btn btn-default" value="Submit" />
       {/* Show a cancel button if Edit Student form */}
