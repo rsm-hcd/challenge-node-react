@@ -20,7 +20,7 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
           required
         />
       </div>
-      <div className="form-control">
+      <div className="form-group">
         <label>Last Name</label>
         <input
           type="text"
@@ -31,7 +31,7 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
           required
         />
       </div>
-      <div className="form-control">
+      <div className="form-group">
         <label>Email</label>
         <input
           type="email"
@@ -42,7 +42,7 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
           required
         />
       </div>
-      <div className="form-control">
+      <div className="form-group">
         <label>Age</label>
         <input
           type="number"
@@ -53,7 +53,7 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
           required
         />
       </div>
-      <div className="Grade">
+      <div className="form-group">
         <label>Grade</label>
         <select
           name="grade"
@@ -71,3 +71,5 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
     </form>
   )
 }
+
+export default StudentForm;
