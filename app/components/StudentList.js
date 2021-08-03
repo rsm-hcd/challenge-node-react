@@ -22,7 +22,8 @@ class StudentList extends React.Component {
     ));
 
     return (
-      <div>
+      <div className="col-md-8">
+        <h3>Current Students</h3>
         <table className="table table-striped table-hover">
           <thead>
             <tr>

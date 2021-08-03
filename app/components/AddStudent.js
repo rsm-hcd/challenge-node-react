@@ -42,7 +42,7 @@ class AddStudent extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="col-md-4">
         <h3>Add Student</h3>
         <StudentForm
           student={this.state}

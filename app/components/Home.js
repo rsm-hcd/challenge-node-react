@@ -9,10 +9,12 @@ import DeleteStudent from './DeleteStudent';
 class Home extends React.Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <Messages messages={this.props.messages} />
-        <StudentList />
-        <AddStudent />
+        <div className="row">
+          <StudentList />
+          <AddStudent />
+        </div>
         {this.props.editIsVisible && <EditStudent />}
         {this.props.deleteisVisible && <DeleteStudent />}
       </div>
