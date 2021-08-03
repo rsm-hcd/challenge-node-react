@@ -1,20 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { sortStudents } from '../actions/student';
+import { updateSort } from '../actions/student';
 
 class Sort extends React.Component {
   constructor(props) {
     super(props);
+
+    this.sort = this.sort.bind(this);
   }
 
-  sort() {
-    this.props.sortStudents('name');
-  }
+  sort() {}
 
   render() {
     return (
-      <div>
-        <button onClick={this.sort}>sort</button>
+      <div className="col-md-2">
+        <h3>Sort Students</h3>
       </div>
     );
   }
