@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleEdit, editStudent } from '../actions/student';
+import StudentForm from './StudentForm';
 
 class EditStudent extends React.Component {
   constructor(props) {
@@ -49,8 +50,13 @@ class EditStudent extends React.Component {
         <div className="modal-overlay" onClick={this.hideForm}>
         </div>
         <div className="modal">
-          <form handleSubmit={this.handleSubmit}>
           <h3>Edit Student Information</h3>
+          <StudentForm
+            student={this.state}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+          />
+          {/* <form handleSubmit={this.handleSubmit}>
             <div className="form-group">
               <label>First Name</label>
               <input
@@ -110,7 +116,7 @@ class EditStudent extends React.Component {
             type="submit"
             value="Submit"
           />
-          </form>
+          </form> */}
         </div>
       </div>
     )
