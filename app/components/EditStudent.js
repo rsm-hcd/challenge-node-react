@@ -35,9 +35,10 @@ class EditStudent extends React.Component {
       email: this.state.email,
       age: this.state.age,
       grade: this.state.grade
-    }
+    };
 
-    this.props.editStudent(studentData)
+    this.props.editStudent(studentData);
+    this.hideForm();
   }
 
   handleChange(e) {
@@ -55,6 +56,8 @@ class EditStudent extends React.Component {
             student={this.state}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            isEdit={true}
+            hideForm={this.hideForm}
           />
           {/* <form handleSubmit={this.handleSubmit}>
             <div className="form-group">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentForm = ({ student, handleChange, handleSubmit }) => {
+const StudentForm = ({ student, handleChange, handleSubmit, isEdit, hideForm }) => {
   const grades = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
 
   const options = grades.map((grade, i) => (
@@ -68,6 +68,13 @@ const StudentForm = ({ student, handleChange, handleSubmit }) => {
         className="btn btn-default"
         value="Submit"
       />
+      {isEdit && (
+        <button
+          className="btn btn-default"
+          onClick={hideForm}>
+            Cancel
+        </button>
+      )}
     </form>
   )
 }
